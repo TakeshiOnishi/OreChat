@@ -4,13 +4,14 @@ import { useRouter } from "next/navigation";
 import { useRecoilState } from "recoil";
 import { useEffect, useState } from "react";
 import { ApiResponse, CustomError, MySkywayAuthInfo } from "@/lib/interface";
-import { skywayTokenState, myChannelNameState, skywayJwtForTokenState } from "@/lib/context";
+import { skywayTokenState, myChannelNameState, skywayJwtForTokenState, consentUsingVRMState } from "@/lib/context";
 import { JA_CHANNEL_MAPPINGS } from "@/lib/constant";
 import { validSkywayToken } from "@/lib/controlSkyway";
 
 export default function Lounge() {
   const router = useRouter();
   const [skywayToken, setSkywayToken] = useRecoilState(skywayTokenState);
+  const [consentUsingVRM, setConsentUsingVRM] = useRecoilState(consentUsingVRMState);
   const [skywayJwtForToken, setSkywayJwtForToken] = useRecoilState(skywayJwtForTokenState);
 
   const [_, setMyChannelName] = useRecoilState(myChannelNameState);
@@ -18,6 +19,20 @@ export default function Lounge() {
 
   useEffect(() => {
     setDomLoaded(true);
+
+    if(!consentUsingVRM){
+      const confirmTxt = `
+      本ページで使用してるアバターVRM「バーチャルジョイマン高木」は
+      株式会社よしもとクリエイティブ・エージェンシーの提供モデルです。
+      利用される際は規約を確認して同意の上ご利用下さい。
+      https://campaign.showroom-live.com/takagi/#takagi_004
+        `
+      if (!window.confirm(confirmTxt)) {
+        location.href="https://www.google.com/"
+      }else{
+        setConsentUsingVRM(() => true)
+      }
+    }
   }, []);
 
   const getToken = async () => {

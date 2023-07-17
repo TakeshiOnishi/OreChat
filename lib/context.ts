@@ -47,3 +47,9 @@ export const isMyVoiceCheckEnableState = atom({
   default: true,
   effects_UNSTABLE: [persistAtom],
 });
+
+export const consentUsingVRMState = atom({
+  key: 'consentUsingVRM',
+  default: false,
+  effects_UNSTABLE: [persistAtom],
+});
