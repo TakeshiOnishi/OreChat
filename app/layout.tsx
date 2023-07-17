@@ -6,7 +6,7 @@ import RecoilProvider from "./recoilProvider"
 const inter = Noto_Sans_JP({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "みんな俺 匿名チャット",
+  title: "みんな俺 匿名会議",
   description: "顔も声も隠すチャットだから話しやすいはずだよ！",
 };
 

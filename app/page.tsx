@@ -78,12 +78,12 @@ export default function Lounge() {
       <div className="container px-5 py-24 mx-auto flex flex-wrap items-center">
         <div className="w-4/6 bg-gray-100 rounded-lg p-8 flex flex-col mx-auto mt-10">
           <h1 className="text-2xl font-medium title-font mb-4 text-gray-900 text-center">
-            みんな俺になる匿名チャット
+            みんな俺になる匿名会議
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-center mb-5">
             みんな俺になる。
             <br />
-            人の顔色を気にする必要がない新世代チャット。
+            人の顔色を気にする必要がない新世代会議。
             <br />
             自由なディスカッションをしよう。
             <br />
