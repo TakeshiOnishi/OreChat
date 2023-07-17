@@ -170,7 +170,6 @@ export default function Channel() {
       const context = await SkyWayContext.Create(skywayToken);
 
       myChannel = await SkyWayChannel.FindOrCreate(context, {
-        type: 'sfu',
         name: JA_CHANNEL_MAPPINGS[myChannelName],
         metadata: myChannelName,
       });
