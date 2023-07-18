@@ -1,7 +1,8 @@
 # みんな俺 匿名会議
 
 - [SkyWay](https://skyway.ntt.com/ja/)を利用したアバターを利用した匿名会議サービス
-- 詳細は[こちらの記事](https://)を見てください。
+- 詳細は[こちらの記事](https://qiita.com/water_resistant/items/dac22c0077e06c72819f)を見てください。
+  - 実装解説から作成背景まで書いてます。
 
 ## Usage
 
